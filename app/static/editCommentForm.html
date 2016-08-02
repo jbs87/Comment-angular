@@ -1,0 +1,12 @@
+<div class="border-form-div">
+    <form name="editCommentForm">
+    <fieldset class="form-group" ng-class="{ 'has-error': editCommentForm.commentBody.$invalid && editCommentForm.commentBody.$dirty }">
+        <label class="control-label" for="commentBody">Comment</label>
+        <textarea id="commentBody" name="commentBody" class="form-control" ng-model="editText"
+                  placeholder="Enter your comment" required></textarea>
+        <p class="help-block" ng-if="editCommentForm.commentBody.$error.required">Comment text is required</p>
+    </fieldset>
+    <input type="button" class="btn btn-danger" value="Send"
+           ng-click="editComment(data.id, editText)" ng-disabled="editCommentForm.$invalid"/>
+    </form>
+</div>

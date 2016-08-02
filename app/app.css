@@ -7,6 +7,18 @@
   padding: 0 0 0.5em;
 }
 
+.jumbotron {
+  background: rgb(200, 54, 54); /* This is for ie8 and below */
+  background: rgba(200, 54, 54, 0);
+  max-height: 200px;
+}
+
+body{
+  background-image: url("static/background.jpg");
+  background-color: #cccccc;
+}
+
+
 .menu:before {
   content: "[";
 }
@@ -27,4 +39,128 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+table{
+  display: inline;
+}
+
+td{
+  width: 5%;
+  padding: 3px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.border-form-div {
+  max-width: 60%;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.formComments {
+
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 60px;
+  padding-left: 0px;
+
+}
+
+.formComments li {
+
+  margin-bottom: 5px;
+
+}
+
+.comment-user {
+
+  margin-left: 10px;
+
+}
+
+
+
+.comment-marker {
+
+  margin-right: 10px;
+  color: #aeaeae;
+
+}
+
+
+.comment-step1:hover {
+
+
+}
+
+.selectmenu{
+  width: 20%
+}
+
+.comment {
+  background-color: #fff;
+  font-size: 12px;
+  margin: 0;
+  padding: 8px 8px;
+  line-height: 1.5;
+  color: #9e9e9e;
+  border-color: #ddd;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+  border-bottom: 3px solid #dddddd;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.comment:hover {
+
+  background-color: #fafafa;
+
+}
+
+.comment-actions {
+
+  border-top: 1px solid #dddddd;
+  padding-top: 8px;
+  margin-top: 8px;
+  display: none;
+
+}
+
+.commentTD {
+
+}
+
+.btn-space {
+  margin: 20px;
+}
+
+.table-responsive
+{
+  overflow-x: auto;
+}
+
+.btn-group{
+  float: right
+}
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
 }

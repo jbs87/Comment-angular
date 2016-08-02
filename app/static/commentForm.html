@@ -1,0 +1,26 @@
+<div class="border-form-div">
+    <form name = "createCommentForm">
+
+    <fieldset class="form-group" ng-class="{ 'has-error': createCommentForm.name.$invalid && createCommentForm.name.$dirty }">
+        <label class="control-label" for="userName">Name</label>
+        <input type="text" id="userName" class="form-control" name="name" required ng-model="replySubject" placeholder="Enter your name">
+        <p class="help-block" ng-if="createCommentForm.name.$error.required">The user's name is required</p>
+    </fieldset>
+    <fieldset class="form-group" ng-class="{ 'has-error': createCommentForm.commentText.$invalid && createCommentForm.commentText.$dirty }">
+        <label class="control-label" for="commentBody">Comment</label>
+        <textarea id="commentBody" class="form-control" ng-model="replyBody" required name="commentText"
+                  placeholder="Enter your comment"></textarea>
+        <p class="help-block" ng-if="createCommentForm.commentText.$error.required">Comment is required</p>
+    </fieldset>
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset class="form-group" >
+                <label for="commentBody">City</label>
+                <input type="text" ng-model="typeaheadObject.query" typeahead-editable="true" ng-model-options="{ debounce: 500 }" uib-typeahead="place as place.name + ', '+ place.countryName for place in checkLocation($viewValue) | limitTo:5" class="form-control">
+            </fieldset>
+        </div>
+    </div>
+    <input type="button" class="btn btn-danger" value="Send"
+           ng-click="makeReply(data.id,replySubject,replyBody)" ng-disabled="createCommentForm.$invalid"/>
+    </form>
+</div>
